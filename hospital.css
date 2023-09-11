@@ -1,0 +1,799 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+}
+html{
+    font-size: 80%;
+    font-family: sans-serif;
+    overflow: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: green;
+    height: 7rem;
+    border-radius: 20px;
+}
+html::-webkit-scrollbar-track{
+    background: #fff;
+}
+.header{
+    width: 100%;
+    padding: 2rem 6%;
+    height: 100px;
+    background: darkgreen;
+    position: sticky;
+    top: 0;
+    left: 0;right: 0;
+    color: #fff;
+    z-index: 9;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.ul{
+    list-style: none;
+    display: inline-block;
+}
+.ul li{
+    margin-left: 1rem;
+    display: inline-block;
+}
+.ul li a{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #fff;    
+}
+.ul li a:hover{
+    color: gold;
+}
+.fa-search{
+    margin-left: 1.5rem;
+}
+.fa-search{
+    font-size: 17px;
+}
+.search{
+    width: 15rem;
+    border-radius: 50px;
+    padding: 4px 20px;
+    color: #000;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.menu-icon{
+    font-size: 3rem;
+    color: #fff;
+    line-height: 90px;
+    cursor: pointer;
+    display: none !important;
+}
+
+@media (max-width:900px) {
+    .nav .ul{
+        position: absolute;
+        top: -110%;
+        left: 0;
+        width:100%;
+        height: 0%;
+        overflow: hidden;
+        z-index: 9;
+        background: #009f7f;
+        text-align: center;
+        padding: 0;
+        padding-top: 15%;
+        transition: 0.5s ease-in;
+    }
+    .ul.active{
+        top: 100px;
+        height: 100vh;
+    }
+    .nav ul li{
+        display: block;
+        margin: 1.5rem 0;
+    }
+    .nav ul li a{
+        color: #fff;
+        margin: 1.5rem 0;
+    }
+    .fa-search{
+        margin-top: 20%;
+    }
+    .menu-icon{
+        display: block !important;
+    }
+
+}
+
+/*...............Home..................*/
+section{
+    position: sticky;
+    padding: 3rem 6%;
+    color: black;
+    width: 100vw;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.flex1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100vw;
+}
+.home{
+    position: sticky;
+    color: black;
+    width: 100vw;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+.left{
+    max-width: 600px;
+}
+.left1{
+    margin-top: 17%;
+}
+.left h2{
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.left p{
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.left .link{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.btn{
+    width: 15rem;
+    background: orange;
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.5s ease-in;
+    position: relative;
+}
+.link .btn::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background: blue;
+}
+.link .btn:hover .link .btn::before{
+    background: blue;
+    left: 0;
+}
+.link .btn:focus{
+    background: orangered;
+}
+.right{
+    width: 400px;
+}
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:900px) {
+    
+    .left{
+        width: 100%;
+    }
+    .right{
+        
+        width: 100%;
+    }
+    .home{
+        padding: 0 2%;
+    }
+}
+
+
+/*................About...................*/
+.about{
+    background: #eee;
+}
+.about .left .link .btn:hover{
+    background: #fff;
+    color: orange;
+    border: 2px solid orange;
+}
+.about .right{
+    height: 400px;
+    margin-top: 10rem;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .right img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+@media (max-width:900px) {
+    .about{
+        padding: 0 2%;
+    }
+}
+
+/*...............My Doctore...........*/
+
+.mydoctor{
+    width: 100%;
+
+}
+.doc1{
+    padding-bottom: 20px;
+}
+.doc1 h2{
+    text-align: center;
+    font-size: 2rem;
+    width: 1005;
+    text-transform: capitalize;
+}
+/*.flex-row{
+    display: grid;
+    grid-template-columns: ;
+}*/
+.flex-row, .docFlex2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.flex-item{
+    max-width: 250px;
+    border: 1px solid orange;
+    padding: 20px;
+    height: auto;
+    border-radius: 5px;
+}
+.item-icon{
+    text-align: center;
+    width: 6rem;
+    background: wheat;
+    margin: 0;
+    margin-left: 5rem;
+}
+.item-icon i{
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.flex-item h3{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.flex-item p{
+    text-align: justify;
+    width: 100%;
+}
+
+@media (max-width:900px) {
+    .flex-row{
+        padding: 0 1%;
+    }
+    .flex-item{
+        width: 100%;
+    }
+}
+
+.doc2{
+    padding: 2% 0;
+    background: #fff;
+    border-top: 1px solid orange;
+}
+.docFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+}
+.doc-head h2{
+    text-transform: capitalize;
+    font-size: 22px;
+}
+.doc-head p{
+    padding: 4px 0;
+    font-size: 15px;
+}
+.docFlex .btn{
+    width: 20rem;
+}
+
+.doc-item{
+    max-width: 320px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    margin-top: 30px;
+}
+.doc-item i{
+    position: absolute;
+    top: -19px;
+    left: 40%;
+    font-size: 23px;
+    background: blue;
+    padding: 8px 12px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+.doc-item h2{
+    text-align: center;
+    padding: 10px 0;
+}
+.p{
+    padding: 5px 0;
+}
+.p p{
+    font-size: 14px;
+    text-align: justify;
+    width: 100%;
+}
+.doc-item .link{
+    margin-top: 3rem;
+    text-align: center;
+}
+.doc-item .link .btn{
+    padding: 5px 30px;
+    background: blue;
+}
+
+@media (max-width:900px) {
+    .docFlex{
+        flex-direction: column;
+    }
+    .doc-item{
+        width: 100%;
+    }
+}
+
+/*...............Gallery..................*/
+
+.gallery h2{
+    text-align: center;
+    font-size: 23px;
+}
+.gal-item{
+    width: 360px;
+    height: 300px;
+    border: 1px solid #eee;
+    position: relative;
+}
+.gal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+
+}
+
+.gal1:hover{
+    transform: scale(1.1);
+}
+
+.gal-name{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;right: 0%;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    background: #fff;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+.gal-item:hover .gal-name{
+    display: block;
+}
+.gal-name h2{
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.special-doc{
+    padding: 3% 0;
+}
+.special-doc h2{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.gal-social{
+    position: absolute;
+    bottom: 10px;
+    left: 0;right: 0;
+    text-align: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.gal-social i{
+    background: red;
+    padding: 8px 14px;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+.gal-social i:hover{
+    color: blue;
+    transform: scale(1.1);
+}
+
+
+/*................Blog........................*/
+
+.flex2{
+    display: flex;
+    gap: 7rem;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 0 12%;
+}
+.blog1 .left{
+    width: 500px;
+}
+
+.blog1 .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog1 .right{
+    max-width: 950px;
+}
+.blog1 .right h2{
+    padding: 14px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+.choose-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+.choose-item i{
+    font-size: 22px;
+    cursor: pointer;
+}
+.choose-p{
+    font-size: 14px;
+    
+}
+
+@media (max-width:900px) {
+    .blog1 .left{
+        width: 100%;
+    }
+    .blog1 .right{
+        width: 100%;
+    }
+    .choose-item{
+        display: block;
+        gap: 12px;
+    }
+    .choose-item i{
+        margin-bottom: 12px;
+    }
+}
+
+
+
+
+
+.post{
+    margin-top: 20px;
+}
+.post h2{
+    width: 1005;
+    text-align: center;
+    padding: 10px 0;
+}
+.post2{
+    width: 370px;
+    border: 1px solid black;
+    padding: 20px;
+    height: fit-content;
+}
+
+.post-img{
+    height: 160px;
+    margin-bottom: 15px;
+}
+.post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content{
+    margin-top: 15px;
+}
+.post-h{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.post-p{
+    margin-bottom: 10px;
+}
+.post-p p{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.post-detail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background: orange;
+    padding: 12px;
+}
+.post-add{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    gap: 15px;
+    align-items: center;
+}
+.post-add i{
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+.post-add p{
+    font-size: 18px;
+}
+
+/*....................Created................*/
+.created{
+    padding: 20px 0;
+    background: green;
+    width: 100%;
+}
+.created p{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.created p span{
+    color: orange;
+}
+.contact-head{
+    width: 100%;
+    text-align: center;
+}
+.contact-head h2{
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+.contact-form{
+    width: 100%;
+    background: #eee;
+    border-radius: 4px;
+    height: fit-content;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+.contact-form .input{
+    background: transparent;
+    margin: 0;
+    margin-bottom: 15px;
+    display: block;
+}
+.input input, .input textarea{
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 19px;
+    color: #000;
+    padding: 0 20px;
+}
+.input textarea{
+    height: 200px;
+    padding: 30px 20px;
+}
+.input-a{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px !important;
+}
+.input a{
+    background: green;
+    color: #fff;
+    font-weight: 800;
+    padding: 20px;
+    text-align: center;
+    width: 10rem;
+    border-radius: 5px;
+}
+
+
+
+/*........................Footer...................*/
+.footer{
+    background: #000;
+    width: 100vw;
+    height: 100%;
+    color: #fff;
+}
+
+.footer-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.foot-flex{
+    width: 280px;
+    height: fit-content;
+    padding: 10px;
+    /*background: #333;*/
+    display: block;
+}
+.foot-flex a{
+    color: #fff;
+    display: block;
+}
+.foot-flex h2{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.foot-flex .logo{
+    text-align: center;
+}
+.foot-h h2{
+    text-align: left;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.foot-link{
+    margin-top: 10px;
+}
+.foot-link a{
+    font-size: 16px;
+    background: gray;
+    font-weight: 600;
+    padding: 10px 13px;
+    width: fit-content;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in;
+}
+.foot-link a:hover{
+    background: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
+.linkFlex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.quick-link a{
+    font-size: 19px;
+    padding: 10px 0;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out;
+}
+.quick-link a:hover{
+    color: yellow;
+}
+
+.foot-date{
+    margin-top: 10px;
+}
+.foot-date p{
+    color: 20px;
+    padding: 6px 0;
+
+}
+.foot-card{
+    margin-top: 10px;
+}
+.card-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+.card-flex i{
+    font-size: 2rem;
+    color: yellow;
+}
+
+.card-flex h4{
+    font-weight: 900;
+    text-align: center;
+}
+
+hr{
+    border-top: 2px solid white;
+    width: 60%;
+    height: 20px;
+    margin-top: 4rem !important;
+    margin: auto;
+}
+.foot-bottom{
+    width: 100%;
+    text-align: center;
+}
+.foot-bottom a{
+    color: #fff;
+    background: yellow;
+    border-radius: 4px;
+    padding: 6px 10px;
+    transition: all 0.5s ease-in;
+}
+.foot-bottom a i{
+    font-size: 18px;
+}
+.foot-bottom a:hover{
+    background: #fff;
+    color: yellow;
+}
